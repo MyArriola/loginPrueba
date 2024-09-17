@@ -22,6 +22,7 @@
         while($fila = mysqli_fetch_array($resultado)){
             if(($fila['idUsuario'] == $_POST['idUser']) && ($fila['contrasena'] == $_POST['pw'])){
                 $error = false;
+                $_SESSION['ID'] = $_POST['idUser'];
                 break; //sale del bucle
             }
             else{$error = true;}
